@@ -1,5 +1,14 @@
-import { LogMessage } from './utils.js';
+import { CheckNodeJSVersion, GetNodeJSVersion, LogMessage } from './utils.js';
 
+const currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
+
+LogMessage(`Current NodeJS Version Is ${GetNodeJSVersion()}`);
+LogMessage();
+
+if (!currentNodeVersion) {
+    LogMessage("NodeJS Version v20.10.0 Is Required To Run Some Examples.");
+    LogMessage();
+}
 
 const emptyArray = [];
 const elementArray = new Array (2); 
@@ -19,6 +28,7 @@ for (const car of carIterator) {
     LogMessage(`Iterator : ${car}`);
 }
 LogMessage();
+
 
 // At
 LogMessage('At Example');
@@ -138,12 +148,19 @@ LogMessage(`${Array.from(carArray, (car) => car + ' - New')}`);
 LogMessage();
 
 
-// Array From Async
-// Array.fromAsync(new Map([
-//                         [1, 2], 
-//                         [3,4],
-//                     ]),
-//                     ).then((array) => LogMessage(`Array From Async : ${array}`));
+// ArrayFromAsync Example (Node Version 20.10.0)
+if (currentNodeVersion) {
+    LogMessage('ArrayFromAsync From Example');
+    Array.fromAsync(new Map([
+                            [1, 2], 
+                            [3,4],
+                        ]),
+                        ).then((array) => LogMessage(`Array From Async : ${array}`));
+    LogMessage();
+} else {
+    LogMessage("NodeJS Version 20.10.0 Required To Run ArrayFromAsync Example");
+    LogMessage();
+}
 
 
 // Includes
@@ -227,6 +244,7 @@ LogMessage();
 
 
 // Reverse 
+// Mutates Original Array
 LogMessage('Reverse Example');
 let reverseArray = [...carArray];
 LogMessage(`Reverse : ${reverseArray.reverse()}`);
@@ -241,7 +259,7 @@ LogMessage();
 
 
 // Slice
-// Returns Shallow Copy, Original Array Is Not Modified
+// Returns Shallow Copy, Original Array Is Not Mutated
 LogMessage('Slice Example');
 LogMessage(`Slice : ${carArray.slice(2, 4)}`);
 LogMessage();
@@ -275,3 +293,86 @@ const dateArray = [1, new Date("31 Dec 2024 12:20:00 UTC")];
 LogMessage(`ToLocaleString : ${dateArray.toLocaleString('en', { timeZone: 'UTC' })}`);
 LogMessage();
 
+
+// ToReversed (Node Version 20.10.0)
+// Original Array Is Not Mutated
+if (currentNodeVersion) {
+    LogMessage('ToReversed Example');
+    const nonArray = {length: 4, name : "Jenny", 2: 4};
+    LogMessage(`ToReversed               : ${carArray.toReversed()}`);
+    LogMessage(`ToReversed Sparse Array1 : ${sparceArray1.toReversed()}`);
+    LogMessage(`ToReversed Sparse Array2 : ${sparceArray1.toReversed()}`);
+    LogMessage(`ToReversed Non Array     : ${nonArray.toReversed()}`);
+    LogMessage();
+} else {
+    LogMessage("NodeJS Version 20.10.0 Required To Run ToReversed Example");
+    LogMessage();
+}
+
+
+// ToSorted (Node Version 20.10.0)
+// Original Array Is Not Mutated
+if (currentNodeVersion) {
+    LogMessage('ToSorted Example');
+    LogMessage(`ToSorted : ${carArray.toSorted()}`);
+    LogMessage();
+} else {
+    LogMessage("NodeJS Version 20.10.0 Required To Run ToSorted Example");
+    LogMessage();
+}
+
+
+// ToSplice (Node Version 20.10.0)
+// Original Array Is Not Mutated
+if (currentNodeVersion) {
+    LogMessage('ToSplice Example');
+    LogMessage(`ToSplice : ${carArray.splice(1, 0, "Toyota")}`);
+    LogMessage(`Car Array : ${carArray}`);
+    LogMessage();
+} else {
+    LogMessage("NodeJS Version 20.10.0 Required To Run ToSplice Example");
+    LogMessage();
+}
+
+
+// ToString
+LogMessage('ToString  Example');
+LogMessage(`ToString  : ${carArray.toString()}`);
+LogMessage();
+
+
+// Unshift
+LogMessage('Unshift  Example');
+let unShiftArray = [...carArray];
+LogMessage(`Unshift        : ${unShiftArray.unshift("Dodge", "Lexus")}`);
+LogMessage(`Unshift Array  : ${unShiftArray}`);
+LogMessage();
+
+
+// Value
+LogMessage('Values Example');
+const valuesIterator = carArray.values();
+for (const value of valuesIterator) {
+    LogMessage(`  Value : ${value}`);
+}
+LogMessage();
+
+
+// With (Node Version 20.10.0)
+// Original Array Is Not Mutated
+if (currentNodeVersion) {
+    LogMessage('With Example');
+    LogMessage(`With       : ${carArray.copyWithin("Tesla", 1)}`);
+    LogMessage(`Car Array  : ${carArray.toString()}`);
+    LogMessage();
+} else {
+    LogMessage("NodeJS Version 20.10.0 Required To Run With Example");
+    LogMessage();
+}
+
+
+// Car Array Is Not Mutated
+LogMessage('Car Array Is Not Mutated');
+LogMessage('Original Car Array : Alpha Romeo,BMW,Cadillac,GMC,Ford,Mercedes,Nissan,Volvo');
+LogMessage(`Current Car Array  : ${carArray}`)
+LogMessage();

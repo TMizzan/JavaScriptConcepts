@@ -1,5 +1,5 @@
 
-JavaScript Concepts (Visual Studio For Mac)
+JavaScript Concepts (Visual Studio Code Mac & NodeJS Version 20.10.0)
 ==========================================================================
 
 JavaScript Files
