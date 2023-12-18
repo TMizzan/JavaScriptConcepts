@@ -11,6 +11,7 @@ if (!currentNodeVersion) {
     LogMessage();
 }
 
+
 const emptyArray   = [];
 const elementArray = new Array (2); 
 const carArray     = ["Alpha Romeo", "BMW", "Cadillac", "GMC", "Ford", "Mercedes", "Nissan", "Volvo"];
@@ -149,21 +150,6 @@ LogMessage(`${Array.from(carArray, (car) => car + ' - New')}`);
 LogMessage();
 
 
-// ArrayFromAsync Example (Node Version 20.10.0)
-if (currentNodeVersion) {
-    LogMessage('ArrayFromAsync From Example');
-    Array.fromAsync(new Map([
-                            [1, 2], 
-                            [3,4],
-                        ]),
-                        ).then((array) => LogMessage(`Array From Async : ${array}`));
-    LogMessage();
-} else {
-    LogMessage("NodeJS Version 20.10.0 Required To Run ArrayFromAsync Example");
-    LogMessage();
-}
-
-
 // Includes
 LogMessage('Includes Example');
 LogMessage(`Includes Mercedes : ${carArray.includes("Mercedes")}`);
@@ -299,11 +285,11 @@ LogMessage();
 // Original Array Is Not Mutated
 if (currentNodeVersion) {
     LogMessage('ToReversed Example');
-    const nonArray = {length: 4, name : "Jenny", 2: 4};
+    const nonArray = { length: 4, name : "Jenny", 2: 4 };
     LogMessage(`ToReversed               : ${carArray.toReversed()}`);
-    LogMessage(`ToReversed Sparse Array1 : ${sparceArray1.toReversed()}`);
-    LogMessage(`ToReversed Sparse Array2 : ${sparceArray1.toReversed()}`);
-    LogMessage(`ToReversed Non Array     : ${nonArray.toReversed()}`);
+    LogMessage(`ToReversed Sparse Array1 : ${sparseArray1.toReversed()}`);
+    LogMessage(`ToReversed Sparse Array2 : ${sparseArray2.toReversed()}`);
+    LogMessage(`ToReversed Non Array     : ${Array.prototype.toReversed.call(nonArray)}`);
     LogMessage();
 } else {
     LogMessage("NodeJS Version 20.10.0 Required To Run ToReversed Example");
@@ -315,7 +301,9 @@ if (currentNodeVersion) {
 // Original Array Is Not Mutated
 if (currentNodeVersion) {
     LogMessage('ToSorted Example');
-    LogMessage(`ToSorted : ${carArray.toSorted()}`);
+    let toSortedArray = [...carArray].reverse();
+    //toSortedArray.reverse();
+    LogMessage(`ToSorted : ${toSortedArray.toSorted()}`);
     LogMessage();
 } else {
     LogMessage("NodeJS Version 20.10.0 Required To Run ToSorted Example");
@@ -323,11 +311,11 @@ if (currentNodeVersion) {
 }
 
 
-// ToSplice (Node Version 20.10.0)
+// ToSpliced (Node Version 20.10.0)
 // Original Array Is Not Mutated
 if (currentNodeVersion) {
     LogMessage('ToSplice Example');
-    LogMessage(`ToSplice : ${carArray.splice(1, 0, "Toyota")}`);
+    LogMessage(`ToSplice  : ${carArray.toSpliced(1, 0, "Toyota")}`);
     LogMessage(`Car Array : ${carArray}`);
     LogMessage();
 } else {
@@ -363,7 +351,7 @@ LogMessage();
 // Original Array Is Not Mutated
 if (currentNodeVersion) {
     LogMessage('With Example');
-    LogMessage(`With       : ${carArray.copyWithin("Tesla", 1)}`);
+    LogMessage(`With       : ${carArray.with("Tesla", 1)}`);
     LogMessage(`Car Array  : ${carArray.toString()}`);
     LogMessage();
 } else {
@@ -373,7 +361,7 @@ if (currentNodeVersion) {
 
 
 // Car Array Is Not Mutated
-LogMessage('Car Array Is Not Mutated');
+LogMessage('After All Examples, Car Array Is Not Mutated');
 LogMessage('Original Car Array : Alpha Romeo,BMW,Cadillac,GMC,Ford,Mercedes,Nissan,Volvo');
 LogMessage(`Current Car Array  : ${carArray}`)
 LogMessage();
