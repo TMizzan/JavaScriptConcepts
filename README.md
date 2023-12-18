@@ -2,6 +2,9 @@
 JavaScript Examples (Visual Studio For Mac)
 ==========================================================================
 
+JavaScript Concepts
+--------------------------------------------------------------------------
+
 arrayConcepts.js    - Array Examples
 
 fetchConcepts.js    - Fetch Examples
