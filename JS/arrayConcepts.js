@@ -1,18 +1,19 @@
 import { CheckNodeJSVersion, GetNodeJSVersion, LogMessage } from './utils.js';
 
-const currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
 
-LogMessage(`Current NodeJS Version Is ${GetNodeJSVersion()}`);
+LogMessage(`NodeJS Version Is ${GetNodeJSVersion()}`);
 LogMessage();
 
+
+const currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
 if (!currentNodeVersion) {
-    LogMessage("NodeJS Version v20.10.0 Is Required To Run Some Examples.");
+    LogMessage("NodeJS Version v20.10.0 Is Required To Run Some Examples");
     LogMessage();
 }
 
-const emptyArray = [];
+const emptyArray   = [];
 const elementArray = new Array (2); 
-const carArray = ["Alpha Romeo", "BMW", "Cadillac", "GMC", "Ford", "Mercedes", "Nissan", "Volvo"];
+const carArray     = ["Alpha Romeo", "BMW", "Cadillac", "GMC", "Ford", "Mercedes", "Nissan", "Volvo"];
 
 
 LogMessage(`Empty Array Length   : ${emptyArray.length}`);
