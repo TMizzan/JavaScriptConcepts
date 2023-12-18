@@ -1,6 +1,6 @@
 
 // Log Message Function
-function LogMessage(message) {
+function LogMessage(message = '') {
     console.log(message);
 }
 

@@ -9,7 +9,7 @@ const carArray = ["Alpha Romeo", "BMW", "Cadillac", "GMC", "Ford", "Mercedes", "
 LogMessage(`Empty Array Length   : ${emptyArray.length}`);
 LogMessage(`Element Array Length : ${elementArray.length}`);
 LogMessage(`Sample Array Length  : ${carArray.length}`);
-LogMessage('');
+LogMessage();
 
 
 // Iterator
@@ -18,13 +18,12 @@ const carIterator = carArray[Symbol.iterator]();
 for (const car of carIterator) {
     LogMessage(`Iterator : ${car}`);
 }
-LogMessage('');
-
+LogMessage();
 
 // At
 LogMessage('At Example');
 LogMessage(`At : ${carArray.at(2)}`);
-LogMessage('');
+LogMessage();
 
 
 // Concat
@@ -32,7 +31,7 @@ LogMessage('');
 LogMessage('Concat Example');
 const newCarArray = carArray.concat(["Hyundai", "Mazda"]);
 LogMessage(`Concat :  ${newCarArray}`);
-LogMessage('');
+LogMessage();
 
 
 // CopyWithin
@@ -40,7 +39,7 @@ LogMessage('CopyWithin Example');
 let copyToArray = [...carArray];
 copyToArray.copyWithin(0, 5, 6);
 LogMessage(`CopyWithin : ${copyToArray}`);
-LogMessage('');
+LogMessage();
 
 
 // Entries
@@ -49,7 +48,7 @@ const entryIterator = carArray.entries();
 LogMessage(`Entries (First Iterator Value)  : ${entryIterator.next().value}`);
 LogMessage(`Entries (Second Iterator Value) : ${entryIterator.next().value}`);
 LogMessage(`Entries (Third Iterator Value)  : ${entryIterator.next().value}`);
-LogMessage('');
+LogMessage();
 
 
 // Every
@@ -57,7 +56,7 @@ LogMessage('');
 LogMessage('Every Example');
 const nameCheck = (currentValue) => currentValue.length > 3;
 LogMessage(`Every : ${carArray.every(nameCheck)}`);
-LogMessage('');
+LogMessage();
 
 
 // Fill
@@ -65,14 +64,14 @@ LogMessage('Fill Example');
 let fillArray = [...carArray];
 LogMessage(`Fill : ${fillArray.fill("Unknown", 2, 4)}`);
 LogMessage(`Car  : ${carArray}`);
-LogMessage('');
+LogMessage();
 
 
 // Filter
 LogMessage('Filter Example');
 const filterArray = carArray.filter((name) => name.length > 3);
 LogMessage(`Filtered : ${filterArray}`);
-LogMessage('');
+LogMessage();
 
 
 // Find
@@ -81,14 +80,14 @@ const found = carArray.find((car) => car === "GMC");
 const notFound = carArray.find((car) => car === "Porche");
 LogMessage(`Found Car : ${found}`);
 LogMessage(`Found : ${notFound}`);
-LogMessage('');
+LogMessage();
 
 
 // Find Index
 LogMessage('Find Index Example');
 const foundIndex = carArray.findIndex((car) => car === "GMC");
 LogMessage(`Find Index : ${foundIndex}`);
-LogMessage('');
+LogMessage();
 
 
 // Find Last
@@ -97,7 +96,7 @@ LogMessage('Find Last Example');
 const lastCarArray = carArray.concat(["Hyundai", "Mazda", "Mazda"]);
 const lastFound = lastCarArray.findLast((car) => car === "Mazda");
 LogMessage(`Find Last : ${lastFound}`);
-LogMessage('');
+LogMessage();
 
 
 // Find Last Index
@@ -105,7 +104,7 @@ LogMessage('');
 LogMessage('Find Last Index Example');
 const lastFoundIndex = lastCarArray.findLastIndex((car) => car === "Mazda");
 LogMessage(`Find Last Index : ${lastFoundIndex}`);
-LogMessage('');
+LogMessage();
 
 
 // Flat
@@ -118,25 +117,25 @@ LogMessage(`Flat Array1   : ${nestArray1.flat()}`);
 LogMessage(`Flat Array2   : ${nestArray2.flat()}`);
 LogMessage(`Sparse Array1 : ${sparseArray1.flat()}`);
 LogMessage(`Sparse Array2 : ${sparseArray2.flat(2)}`);
-LogMessage('');
+LogMessage();
 
 
 // Flat Map
 LogMessage('Flat Map Example');
 LogMessage(`Flat Map : ${carArray.flatMap((car) => (car === "GMC" ? "GMC2" : car))}`);
-LogMessage('');
+LogMessage();
 
 
 // For Each
 LogMessage('For Each Example');
 carArray.forEach((car) => LogMessage(`Car : ${car}`));
-LogMessage('');
+LogMessage();
 
 
 // From
 LogMessage('From Example');
 LogMessage(`${Array.from(carArray, (car) => car + ' - New')}`);
-LogMessage('');
+LogMessage();
 
 
 // Array From Async
@@ -150,25 +149,25 @@ LogMessage('');
 // Includes
 LogMessage('Includes Example');
 LogMessage(`Includes Mercedes : ${carArray.includes("Mercedes")}`);
-LogMessage('');
+LogMessage();
 
 
 // Index Of
 LogMessage('Index Of Example');
 LogMessage(`Index Of Mercedes : ${carArray.indexOf("Mercedes")}`);
-LogMessage('');
+LogMessage();
 
 
 // IsArray
 LogMessage('IsArray Example');
 LogMessage(`IsArray : ${Array.isArray(carArray)}`);
-LogMessage('');
+LogMessage();
 
 
 // Join
 LogMessage('Join Example');
 LogMessage(`Join : ${carArray.join('/')}`);
-LogMessage('');
+LogMessage();
 
 
 // Keys
@@ -177,39 +176,39 @@ const carKeyIterator = carArray.keys();
 for (const key of carKeyIterator) {
     LogMessage(`Car Iterator Key : ${key}`);
 }
-LogMessage('');
+LogMessage();
 
 
 // LastIndexOf
 LogMessage('LastIndexOf Example');
 LogMessage(`Last Index Of : ${lastCarArray.lastIndexOf("Mazda")}`);
-LogMessage('');
+LogMessage();
 
 
 // Map
 LogMessage('Map Example');
 LogMessage(`Map : ${carArray.map((car) => car + " - New")}`);
-LogMessage('');
+LogMessage();
 
 
 // Of 
 LogMessage('Of Example');
 LogMessage(`Array Of ${Array.of("Diesel", "Electric", "Gas")}`);
-LogMessage('');
+LogMessage();
 
 
 // Pop
 LogMessage('Pop Example');
 let popArray = [...carArray];
 LogMessage(`Pop : ${popArray.pop()}`);
-LogMessage('');
+LogMessage();
 
 
 // Push
 LogMessage('Push Example');
 let pushArray = [...carArray];
 LogMessage(`Push : ${pushArray.push("Buick")}`);
-LogMessage('');
+LogMessage();
 
 
 //  Reduce 
@@ -217,41 +216,41 @@ LogMessage('Reduce Example');
 let reduceArray = ["2", "4", "6", "8", "10"];
 let reduce = reduceArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 LogMessage(`Reduce : ${reduce}`);
-LogMessage('');
+LogMessage();
 
 
 // Reduce Right
 LogMessage('Reduce Right Example');
 let reduceRight = reduceArray.reduceRight((accumulator, currentValue) => accumulator + currentValue);
 LogMessage(`Reduce Right : ${reduceRight}`);
-LogMessage('');
+LogMessage();
 
 
 // Reverse 
 LogMessage('Reverse Example');
 let reverseArray = [...carArray];
 LogMessage(`Reverse : ${reverseArray.reverse()}`);
-LogMessage('');
+LogMessage();
 
 
 // Shift 
 LogMessage('Shift Example');
 let shiftArray = [...carArray];
 LogMessage(`Shift : ${shiftArray.shift()}`);
-LogMessage('');
+LogMessage();
 
 
 // Slice
 // Returns Shallow Copy, Original Array Is Not Modified
 LogMessage('Slice Example');
 LogMessage(`Slice : ${carArray.slice(2, 4)}`);
-LogMessage('');
+LogMessage();
 
 
 // Some 
 LogMessage('Some Example');
 LogMessage(`Some : ${carArray.some((car) => car === "GMC")}`);
-LogMessage('');
+LogMessage();
 
 
 // Sort 
@@ -259,7 +258,7 @@ LogMessage('');
 LogMessage('Sort Example');
 let sortArray = ["Truck", "Car", "Motorcycle", "Bus", "Train", "Moped", "Semi-Truck", "Van"];
 LogMessage(`Sorted : ${sortArray.sort()}`);
-LogMessage('');
+LogMessage();
 
 
 // Splice
@@ -267,12 +266,12 @@ LogMessage('Splice Example');
 let spliceArray = [...carArray];
 spliceArray.splice(1, 0, "Toyota");
 LogMessage(`Splice : ${spliceArray}`);
-LogMessage('');
+LogMessage();
 
 
 // ToLocaleString
 LogMessage('ToLocaleString Example');
-const dateArray = [1, "31 Dec 2024 12:20:00 UTC"];
-LogMessage(`ToLocaleString : ${dateArray.toLocaleString('en', { timeZone: "UTC" })}`);
-LogMessage('');
+const dateArray = [1, new Date("31 Dec 2024 12:20:00 UTC")];
+LogMessage(`ToLocaleString : ${dateArray.toLocaleString('en', { timeZone: 'UTC' })}`);
+LogMessage();
 
