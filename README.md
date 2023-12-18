@@ -1,6 +1,17 @@
 
-JavaScript Concepts (Visual Studio Code Mac & NodeJS Version 20.10.0)
+JavaScript Concepts
 ==========================================================================
+
+
+
+Requirements
+--------------------------------------------------------------------------
+
+Visual Studio Code Mac
+
+NodeJS Version 20.10.0
+
+
 
 JavaScript Files
 --------------------------------------------------------------------------
