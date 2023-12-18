@@ -7,9 +7,12 @@ JavaScript Concepts
 Requirements
 --------------------------------------------------------------------------
 
-Visual Studio Code Mac
+Visual Studio Code
+https://code.visualstudio.com
+* Project Created With Mac Version 
 
 NodeJS Version 20.10.0
+https://nodejs.org/en
 
 
 
