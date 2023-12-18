@@ -1,20 +1,20 @@
 
-JavaScript Examples (Visual Studio For Mac)
+JavaScript Concepts (Visual Studio For Mac)
 ==========================================================================
 
-JavaScript Concepts
+JavaScript Files
 --------------------------------------------------------------------------
 
-arrayConcepts.js    - Array Examples
+arrayConcepts.js    - Array Concepts
 
-fetchConcepts.js    - Fetch Examples
+fetchConcepts.js    - Fetch Concepts
 
-functionConcepts.js - Function Examples
+functionConcepts.js - Function Concepts
 
-jsonConcepts.js     - JSON Examples
+jsonConcepts.js     - JSON Concepts
 
-promiseConcepts.js  - Promise Examples
+promiseConcepts.js  - Promise Concepts
 
-utils.js            - Utility Methos
+utils.js            - Utility Concepts
 
-variableConcepts.js - Variable Examples
+variableConcepts.js - Variable Concepts
