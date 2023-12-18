@@ -270,11 +270,9 @@ LogMessage(`Splice : ${spliceArray}`);
 LogMessage('');
 
 
-
-
-
-//
-//LogMessage(' Example');
-//LogMessage(`${}`);
-//LogMessage('');
+// ToLocaleString
+LogMessage('ToLocaleString Example');
+const dateArray = [1, "31 Dec 2024 12:20:00 UTC"];
+LogMessage(`ToLocaleString : ${dateArray.toLocaleString('en', { timeZone: "UTC" })}`);
+LogMessage('');
 
