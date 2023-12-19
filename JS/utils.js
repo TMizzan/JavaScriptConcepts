@@ -57,4 +57,20 @@ function LogMessage(message = '') {
     console.log(message);
 }
 
-export { CheckNodeJSVersion, GetNodeJSVersion, LogMessage };
+
+function DisplayNodeJSInformation(currentNodeVersion = "") {
+ 
+    if (currentNodeVersion === "") {
+        currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
+    }
+
+    LogMessage(`NodeJS Version Is ${GetNodeJSVersion()}`);
+    LogMessage();
+
+    if (!currentNodeVersion) {
+        LogMessage("NodeJS Version v20.10.0 Is Required To Run Some Examples");
+        LogMessage();
+    }
+}
+
+export { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage };

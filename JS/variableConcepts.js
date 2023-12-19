@@ -1,4 +1,7 @@
-import { LogMessage } from './utils.js';
+import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+
+// Display NodeJS Information
+DisplayNodeJSInformation();
 
 // Data Types
 let firstName = "";     // String

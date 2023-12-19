@@ -1,15 +1,9 @@
-import { CheckNodeJSVersion, GetNodeJSVersion, LogMessage } from './utils.js';
+import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
 
 
-LogMessage(`NodeJS Version Is ${GetNodeJSVersion()}`);
-LogMessage();
-
-
-const currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
-if (!currentNodeVersion) {
-    LogMessage("NodeJS Version v20.10.0 Is Required To Run Some Examples");
-    LogMessage();
-}
+// Display NodeJS Information
+let currentNodeVersion = CheckNodeJSVersion(20, 10, 0);
+DisplayNodeJSInformation(currentNodeVersion);
 
 
 const emptyArray   = [];

@@ -1,4 +1,7 @@
-import { LogMessage } from './utils.js';
+import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+
+// Display NodeJS Information
+DisplayNodeJSInformation();
 
 let testJSON = '{ "employees" : [' +
                '{ "firstName" : "John",  "lastName" : "Doe" },' +
