@@ -85,7 +85,6 @@ LogMessage(`GetOwnPropertyDescriptors Seats Value Writable : ${passengersDescrip
 LogMessage();
 
 
-
 // GetOwnPropertyNames
 LogMessage('GetOwnPropertyNames Example');
 LogMessage(`GetOwnPropertyNames Moped : ${Object.getOwnPropertyNames(moped)}`);
