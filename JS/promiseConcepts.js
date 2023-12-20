@@ -32,8 +32,8 @@ vehiclePurchasePromise.
         .catch(function(errorMessage) {
             LogMessage(`VehiclePurchasePromise - Error Message   : ${errorMessage}`);
         })
-        .finally(() => {
-            LogMessage("VehiclePurchasePromise - Vehicle Purchace Date Confirmed.");
+        .finally(function() {
+            LogMessage("VehiclePurchasePromise - Vehicle Purchase Date Confirmed.");
         });
 
 LogMessage();
@@ -69,7 +69,7 @@ Promise.allSettled([vehicleMaintenancePromise, vehicleRepairPromise]).
 // Promise Any
 const vehicleRejectPromise = Promise.reject("Vehicle Out Of Service");
 const vehicleFuelPromise = new Promise(function (resolve, reject) { 
-    setTimeout(reject, 800, "[VehicleFuelPromise      - Vehicle Fuel Fill Incomplete.]");
+    setTimeout(reject, 800, "[VehicleFuelPromise - Vehicle Fuel Fill Incomplete.]");
 });
 
 Promise.any([vehicleRejectPromise, vehicleFuelPromise]).
