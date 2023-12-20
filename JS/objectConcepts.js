@@ -1,7 +1,65 @@
 import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
 
+
 // Display NodeJS Information
 DisplayNodeJSInformation();
+
+
+// Assign
+LogMessage('Assign Example');
+const moped      = { passengers: 2, seats : 1 };
+const motorcycle = { mirrors: 4, wheels : 2 };
+const cycle      = Object.assign(motorcycle, moped);
+LogMessage(`Motorcylce           : ${motorcycle}`);
+LogMessage(`Cycle (Combined)     : ${cycle}`);
+LogMessage(`Cycle === Motorcycle : ${(cycle === motorcycle)}`);
+LogMessage(`Cycle === Moped      : ${(cycle === moped)}`);
+LogMessage();
+
+
+// Create 
+LogMessage('Create Example');
+const harleyDavidson = Object.create(motorcycle); 
+LogMessage(`Harley-Davidson : Seats - ${harleyDavidson.seats}, Mirrors - ${harleyDavidson.mirrors}`);
+LogMessage();
+
+
+// DefineProperties
+LogMessage('DefineProperties Example');
+Object.defineProperties(harleyDavidson,  
+                        {
+                            engine: {
+                                        value    : 'milwaukeeEight114',
+                                        writable : true  
+                                    },
+                            color: {
+                                        value    : 'black',
+                                        writable : true
+                                    },
+                        });
+LogMessage(`DefineProperties : HD Engine - ${harleyDavidson.engine}, HD Color - ${harleyDavidson.color}`);
+LogMessage();
+
+
+// Entries 
+LogMessage('Entries Example');
+for (const [key, value] of Object.entries(cycle)) {
+    LogMessage(`Entries : key - ${key}, value - ${value}`);
+}
+LogMessage();
+
+
+// Freeze
+LogMessage('Freeze Example');
+const freezObject = { bike: "Schwinn" };
+Object.freeze(freezObject);
+try {
+    freezObject.bike = "Huffy";
+}
+catch (ex) {
+    LogMessage(`Freeze : ${ex}`);
+}
+LogMessage();
 
 
 // HasOwnProperty
@@ -64,8 +122,3 @@ LogMessage(`Is Sealed                : ${Object.isSealed(sealedClass)}`);
 Object.seal(sealedClass);
 LogMessage(`Is Sealed - After Sealed : ${Object.isSealed(sealedClass)}`);
 LogMessage();
-
-// 
-// LogMessage('Example');
-// LogMessage(`${}`);
-// LogMessage();
