@@ -7,7 +7,7 @@ function GetNodeJSVersion() {
 // CheckNodeVersion Function
 function CheckNodeJSVersion(major, minor, build, revision = 0) {
     
-    // Verion Variables
+    // Version Variables
     let majorValid    = true;
     let minorValid    = true;
     let buildValid    = true;
