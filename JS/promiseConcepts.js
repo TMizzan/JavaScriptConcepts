@@ -1,4 +1,4 @@
-import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+import { CheckNodeJSVersion, DisplayNodeJSInformation, GetRandomNumber, LogMessage } from './utils.js';
 
 // Display NodeJS Information
 DisplayNodeJSInformation();
@@ -12,26 +12,48 @@ let vehiclePurchasePromise = new Promise(function (resolve, reject) {
     
     let min = 1;
     let max = 5;
-    let purchaseDay = Math.floor((Math.random() * (max - min + 1) + min));
+    let purchaseDay = GetRandomNumber(min, max);
 
-    if (purchaseDay >= 5) {
-        resolve(`The Purchase Date (${purchaseDay}) On Or Later Than 5.`);
+    if (purchaseDay >= max) {
+        resolve(`Purchase Date (${purchaseDay}) On Or Later Than ${max}.`);
     } else {
-        reject(`The Purchase Date (${purchaseDay}) Earlier Than 5.`);
+        reject(`Purchase Date (${purchaseDay}) Earlier Than ${max}.`);
     }
-    
 });
-
 
 vehiclePurchasePromise.
     then(
-        function (successMessage) {
-            LogMessage(`Success Message : ${successMessage}`);
-        }, 
-        function (rejectMessage) {
-            LogMessage(`Reject Message  : ${rejectMessage}`);
-        })
+          function (successMessage) {
+              LogMessage(`VehiclePurchasePromise - Success Message : ${successMessage}`);
+          }, 
+          function (rejectMessage) {
+              LogMessage(`VehiclePurchasePromise - Reject Message  : ${rejectMessage}`);
+          }
+        )
         .catch(function(errorMessage) {
-            LogMessage(`Error Message   : ${errorMessage}`);
+            LogMessage(`VehiclePurchasePromise - Error Message   : ${errorMessage}`);
+        })
+        .finally(() => {
+            LogMessage("VehiclePurchasePromise - Vehicle Purchace Date Confirmed.");
         });
 
+LogMessage();
+
+// Promise Race
+let vehicleRacePromise1 = new Promise(function (resolve, reject) { 
+    setTimeout(resolve, 500, "VehicleRacePromise1 - First Promise Complete.")
+});
+
+let vehicleRacePromise2 = new Promise(function (resolve, reject) { 
+    setTimeout(resolve, 100, "VehicleRacePromise1 - Second  Promise Complete.")
+});
+
+Promise.race([vehicleRacePromise1], [vehicleRacePromise2]).
+    then((value) => { 
+        LogMessage();
+        LogMessage("Promise Race Example");
+        LogMessage();
+        LogMessage(`VehicleRacePromise - ${value}`);
+    });
+
+LogMessage();

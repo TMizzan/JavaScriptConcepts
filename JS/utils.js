@@ -4,6 +4,10 @@ function GetNodeJSVersion() {
     return process.version;
 }
 
+function GetRandomNumber(min, max) {
+    return Math.floor((Math.random() * (max - min + 1) + min));
+}
+
 // CheckNodeVersion Function
 function CheckNodeJSVersion(major, minor, build, revision = 0) {
     
@@ -73,4 +77,4 @@ function DisplayNodeJSInformation(currentNodeVersion = "") {
     }
 }
 
-export { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage };
+export { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, GetRandomNumber, LogMessage };
