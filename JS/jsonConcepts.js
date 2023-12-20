@@ -13,8 +13,8 @@ let testJSON = '{ "employees" : [' +
 LogMessage("JSON Example");
 const employeeJSON = JSON.parse(testJSON);
 LogMessage(`Employee One Name   : ${employeeJSON.employees[0].firstName} ${employeeJSON.employees[0].lastName}`);
-LogMessage(`Employee Two Name   : ${employeeJSON.employees[1].firstName} ${employeeJSON.employees[0].lastName}`);
-LogMessage(`Employee Third Name : ${employeeJSON.employees[2].firstName} ${employeeJSON.employees[0].lastName}`);
+LogMessage(`Employee Two Name   : ${employeeJSON.employees[1].firstName} ${employeeJSON.employees[1].lastName}`);
+LogMessage(`Employee Third Name : ${employeeJSON.employees[2].firstName} ${employeeJSON.employees[2].lastName}`);
 LogMessage();
 
 // ToString
