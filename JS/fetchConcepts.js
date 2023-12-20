@@ -1,11 +1,14 @@
 import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
 
+
 // Display NodeJS Information
 DisplayNodeJSInformation();
 
-// fetch
+
+// Fetch
 // async function GetJSON() {
 //     const response = await fetch("http://www.endpoint.com");
 //     const json = await response.json();
 //     LogMessage(json);
+//     return json;
 // }
