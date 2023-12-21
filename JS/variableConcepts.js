@@ -3,21 +3,35 @@ import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 // Display NodeJS Information
 DisplayNodeJSInformation();
 
-// Data Types
-let firstName = "";     // String
-let count     = 4;      // Number
-let x         = true;   // Boolean 
-let y         = null;   // Null
-let z;                  // Undefined
-let range     = [];     // Array
+// Primitive Data Types
+let bigInt    = BigInt("1234567890123456789");  // Big Int
+let bBool     = true;                           // Boolean 
+let count     = 4;                              // Number
+let name      = "";                             // String
+let symbol    = Symbol("dollar");               // Symbol
+let n         = null;                           // Null
+let u;                                          // Undefined
+let e1         = 123e5;                         // Exponent 12300000 
+let e2         = 123e-5;                        // Exponent 0.00123
 
-let person = { City : "State",          // Object
-               Zip  : "29210" };
+LogMessage("Primitive Data Types");
+LogMessage(`bigInt Type   : ${typeof(count)}`)  // Number
+LogMessage(`b Type        : ${typeof(x)}`)      // Boolean
+LogMessage(`count Type    : ${typeof(count)}`)  // Number
+LogMessage(`name Type     : ${typeof(name)}`)   // String
+LogMessage(`symbol Type   : ${typeof(symbol)}`) // Symbol
+LogMessage(`null Type     : ${typeof(n)}`);     // Typeof Null Is Object
+LogMessage(`udefined Type : ${typeof(u)}`);     // Typeof Undefined Is Undefined
+LogMessage(`e1 Type       : ${typeof(e1)}`)     // Number
+LogMessage(`e2 Type       : ${typeof(e2)}`)     // Number
+LogMessage();
 
-let dt = new Date("2024-01-31");         // Date
-let a  = 123e5;                          // Exponent 12300000 
-let b  = 123e-5;                         // Exponent 0.00123
-let c  = BigInt("1234567890123456789");  // Big Int
+// Object Data Types
+let days   = ["1", "2", "3", "4", "5", "6", "7"]; // Array
+let dt     = new Date("2024-01-31");                 // Date
+let person = { City : "State", Zip  : "29210" }; // Object
 
-LogMessage('Undefined : ' + typeof(undefined));  // Typeof Undefined Is Undefined
-LogMessage('Null      : ' + typeof(null));       // Typeof Null Is Object
+LogMessage("Object Data Types");               
+LogMessage(`days Type     : ${typeof(days)}`);     // Typeof Array Is Object
+LogMessage(`dt Type       : ${typeof(dt)}`);       // Typeof Date Is Object
+LogMessage(`person Type   : ${typeof(person)}`);   // Typeof Person Is Object
