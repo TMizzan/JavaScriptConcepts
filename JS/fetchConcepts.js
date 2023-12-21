@@ -22,9 +22,13 @@ async function GetDateTime() {
     return json;
 };
 
-GetDateTime().then((dateTimeJSON) => {`GetDateTime Success : ${LogMessage((dateTimeJSON !== '') ? 
-                                                               JSON.stringify(dateTimeJSON, null, '\t') : 
-                                                               dateTimeJSON)}`},
-                    (error) => {`GetDateTime Error  : ${error}`});
+GetDateTime().then((dateTimeJSON) => {LogMessage();
+                                      LogMessage('GetDateTime Success');
+                                      LogMessage(`${(dateTimeJSON !== '') ? 
+                                                     JSON.stringify(dateTimeJSON, null, '\t') : 
+                                                     dateTimeJSON}`)},
+                    (error) => {LogMessage();
+                                LogMessage('GetDateTime Error');
+                                LogMessage(`${error}`)});
 
 
