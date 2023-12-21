@@ -1,4 +1,4 @@
-import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 
 // Display NodeJS Information
 DisplayNodeJSInformation();
@@ -20,5 +20,5 @@ LogMessage();
 // ToString
 LogMessage("ToString Example")
 const testString = JSON.stringify(employeeJSON, null, '\t');
-LogMessage(`Empoloyee JSON String   : ${testString}`);
+LogMessage(`Empoloyee JSON String : ${testString}`);
 LogMessage();

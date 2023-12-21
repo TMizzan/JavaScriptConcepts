@@ -1,4 +1,4 @@
-import { CheckNodeJSVersion, DisplayNodeJSInformation, GetRandomNumber, LogMessage } from './utils.js';
+import { DisplayNodeJSInformation, GetRandomNumber, LogMessage } from './utils.js';
 
 // Display NodeJS Information
 DisplayNodeJSInformation();

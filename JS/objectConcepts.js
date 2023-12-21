@@ -1,4 +1,4 @@
-import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 
 
 // Display NodeJS Information
@@ -9,11 +9,12 @@ DisplayNodeJSInformation();
 LogMessage('Assign Example');
 const moped      = { passengers: 2, seats : 1 };
 const motorcycle = { mirrors: 4, wheels : 2 };
-const cycle      = Object.assign(motorcycle, moped);
-LogMessage(`Motorcylce           : ${motorcycle}`);
-LogMessage(`Cycle (Combined)     : ${cycle}`);
-LogMessage(`Cycle === Motorcycle : ${(cycle === motorcycle)}`);
-LogMessage(`Cycle === Moped      : ${(cycle === moped)}`);
+LogMessage(`Motorcycle Keys       : ${Object.keys(motorcycle).sort()}`);
+
+const cycle = Object.assign(motorcycle, moped);
+LogMessage(`Cycle Keys (Combined) : ${Object.keys(cycle).sort()}`);
+LogMessage(`Cycle === Motorcycle  : ${(cycle === motorcycle)}`);
+LogMessage(`Cycle === Moped       : ${(cycle === moped)}`);
 LogMessage();
 
 

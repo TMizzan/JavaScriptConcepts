@@ -1,4 +1,4 @@
-import { CheckNodeJSVersion, DisplayNodeJSInformation, GetNodeJSVersion, LogMessage } from './utils.js';
+import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 
 // Display NodeJS Information
 DisplayNodeJSInformation();
@@ -44,7 +44,7 @@ LogMessage();
 // Call
 // Can Pass Argment List
 LogMessage('Call Example');
-LogMessage(`Call Truck Description : ${vehicle.getDescription.call(truck)}`);
+LogMessage(`Call Truck Description  : ${vehicle.getDescription.call(truck)}`);
 LogMessage();
 
 
