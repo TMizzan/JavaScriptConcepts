@@ -1,5 +1,6 @@
 import { DisplayNodeJSInformation, GetRandomNumber, LogMessage } from './utils.js';
 
+
 // Display NodeJS Information
 DisplayNodeJSInformation();
 
