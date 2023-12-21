@@ -28,8 +28,8 @@ LogMessage();
 
 // Object Data Types
 let days   = ["1", "2", "3", "4", "5", "6", "7"]; // Array
-let dt     = new Date("2024-01-31");                 // Date
-let person = { City : "State", Zip  : "29210" }; // Object
+let dt     = new Date("2024-01-31");              // Date
+let person = { City : "State", Zip  : "29210" };  // Object
 
 LogMessage("Object Data Types");               
 LogMessage(`days Type      : ${typeof(days)}`);     // Typeof Array Is Object
