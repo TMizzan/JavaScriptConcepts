@@ -115,8 +115,8 @@ LogMessage();
 
 // Flat
 LogMessage('Flat Example');
-const nestArray1 = [0, 1, 2, 3, [4, 5]];
-const nestArray2 = [0, 1, 2, [3, 4, [5, 6]]];
+const nestArray1   = [0, 1, 2, 3, [4, 5]];
+const nestArray2   = [0, 1, 2, [3, 4, [5, 6]]];
 const sparseArray1 = [0, 1, 2, , 4, 5];
 const sparseArray2 = [0, 1, [2, , [4, 5, , 7]]];
 LogMessage(`Flat Array1   : ${nestArray1.flat()}`);

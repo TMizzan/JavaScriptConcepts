@@ -5,7 +5,7 @@ DisplayNodeJSInformation();
 
 class Truck {
     year  = '2025';
-    model = 'Freighliner'
+    model = 'Freightliner'
  }
 
 class Vehicle {
