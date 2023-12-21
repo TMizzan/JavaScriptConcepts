@@ -27,16 +27,16 @@ https://www.jsontest.com
 JavaScript Files
 --------------------------------------------------------------------------
 
-arrayConcepts.js    - Array Concepts
+JS/arrayConcepts.js    - Array Concepts
 
-fetchConcepts.js    - Fetch Concepts
+JS/fetchConcepts.js    - Fetch Concepts
 
-functionConcepts.js - Function Concepts
+JS/functionConcepts.js - Function Concepts
 
-jsonConcepts.js     - JSON Concepts
+JS/jsonConcepts.js     - JSON Concepts
 
-promiseConcepts.js  - Promise Concepts
+JS/promiseConcepts.js  - Promise Concepts
 
-utils.js            - Utility Concepts
+JS/utils.js            - Utility Concepts
 
-variableConcepts.js - Variable Concepts
+JS/variableConcepts.js - Variable Concepts
