@@ -4,15 +4,15 @@ import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 DisplayNodeJSInformation();
 
 // Primitive Data Types
-let bigInt    = BigInt("1234567890123456789");  // Big Int
-let b         = true;                           // Boolean 
-let count     = 4;                              // Number
-let name      = "";                             // String
-let symbol    = Symbol("dollar");               // Symbol
-let n         = null;                           // Null
-let u;                                          // Undefined
-let exp1      = 123e5;                         // Exponent 12300000 
-let exp2      = 123e-5;                        // Exponent 0.00123
+let bigInt    = BigInt("1234567890123456789");   // Big Int
+let b         = true;                            // Boolean 
+let count     = 4;                               // Number
+let name      = "";                              // String
+let symbol    = Symbol("dollar");                // Symbol
+let n         = null;                            // Null
+let u;                                           // Undefined
+let exp1      = 123e5;                           // Exponent 12300000 
+let exp2      = 123e-5;                          // Exponent 0.00123
 
 LogMessage("Primitive Data Types");
 LogMessage(`bigInt Type    : ${typeof(count)}`)  // Number
@@ -32,6 +32,6 @@ let dt     = new Date("2024-01-31");              // Date
 let person = { City : "State", Zip  : "29210" };  // Object
 
 LogMessage("Object Data Types");               
-LogMessage(`days Type      : ${typeof(days)}`);     // Typeof Array Is Object
-LogMessage(`dt Type        : ${typeof(dt)}`);       // Typeof Date Is Object
-LogMessage(`person Type    : ${typeof(person)}`);   // Typeof Person Is Object
+LogMessage(`days Type      : ${typeof(days)}`);    // Typeof Array Is Object
+LogMessage(`dt Type        : ${typeof(dt)}`);      // Typeof Date Is Object
+LogMessage(`person Type    : ${typeof(person)}`);  // Typeof Person Is Object
