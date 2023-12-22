@@ -37,7 +37,7 @@ JavaScript Files
 
 [Object Concepts](JS/objectConcepts.js)
 
-[Promise Concepts](JS.promiseConcepts.js)
+[Promise Concepts](JS/promiseConcepts.js)
 
 [Utility Functions](JS/utils.js)
 
