@@ -1,11 +1,9 @@
 
-JavaScript Concepts
-==========================================================================
+#JavaScript Concepts
 
 
 
-Requirements
---------------------------------------------------------------------------
+##Requirements
 
 Visual Studio Code
 
@@ -24,8 +22,7 @@ JSON Test Website
 https://www.jsontest.com
 
 
-JavaScript Files
---------------------------------------------------------------------------
+###JavaScript Files
 
 [Array Concepts](JS/arrayConcepts.js)
 
