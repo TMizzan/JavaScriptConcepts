@@ -4,26 +4,26 @@ import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 DisplayNodeJSInformation();
 
 // Primitive Data Types
-let bigInt    = BigInt("1234567890123456789");   // Big Int
-let b         = true;                            // Boolean 
-let count     = 4;                               // Number
-let name      = "";                              // String
-let symbol    = Symbol("dollar");                // Symbol
-let n         = null;                            // Null
-let u;                                           // Undefined
-let exp1      = 123e5;                           // Exponent 12300000 
-let exp2      = 123e-5;                          // Exponent 0.00123
+let bigInt    = BigInt("1234567890123456789");    // Big Int
+let b         = true;                             // Boolean 
+let count     = 4;                                // Number
+let name      = "";                               // String
+let symbol    = Symbol("dollar");                 // Symbol
+let n         = null;                             // Null
+let u;                                            // Undefined
+let exp1      = 123e5;                            // Exponent 12300000 
+let exp2      = 123e-5;                           // Exponent 0.00123
 
 LogMessage("Primitive Data Types");
-LogMessage(`bigInt Type    : ${typeof(count)}`)  // Number
-LogMessage(`b Type         : ${typeof(b)}`)      // Boolean
-LogMessage(`count Type     : ${typeof(count)}`)  // Number
-LogMessage(`name Type      : ${typeof(name)}`)   // String
-LogMessage(`symbol Type    : ${typeof(symbol)}`) // Symbol
-LogMessage(`null Type      : ${typeof(n)}`);     // Typeof Null Is Object
-LogMessage(`undefined Type : ${typeof(u)}`);     // Typeof Undefined Is Undefined
-LogMessage(`exp1 Type      : ${typeof(e1)}`)     // Number
-LogMessage(`exp2 Type      : ${typeof(e2)}`)     // Number
+LogMessage(`bigInt Type    : ${typeof(count)}`)   // Number
+LogMessage(`b Type         : ${typeof(b)}`)       // Boolean
+LogMessage(`count Type     : ${typeof(count)}`)   // Number
+LogMessage(`name Type      : ${typeof(name)}`)    // String
+LogMessage(`symbol Type    : ${typeof(symbol)}`)  // Symbol
+LogMessage(`null Type      : ${typeof(n)}`);      // Typeof Null Is Object
+LogMessage(`undefined Type : ${typeof(u)}`);      // Typeof Undefined Is Undefined
+LogMessage(`exp1 Type      : ${typeof(e1)}`)      // Number
+LogMessage(`exp2 Type      : ${typeof(e2)}`)      // Number
 LogMessage();
 
 // Object Data Types
