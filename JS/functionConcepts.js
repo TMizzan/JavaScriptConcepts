@@ -5,6 +5,7 @@ import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 DisplayNodeJSInformation();
 
 
+// Classes
 class Truck {
     year  = '2025';
     model = 'Freightliner'
