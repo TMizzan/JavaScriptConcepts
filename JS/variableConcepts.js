@@ -10,7 +10,7 @@ let count     = 4;                                // Number
 let name      = "";                               // String
 let symbol    = Symbol("dollar");                 // Symbol
 let n         = null;                             // Null
-let u;                                            // Undefined
+let u         = undefined;                        // Undefined
 let exp1      = 123e5;                            // Exponent 12300000 
 let exp2      = 123e-5;                           // Exponent 0.00123
 
