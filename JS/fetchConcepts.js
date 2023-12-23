@@ -8,6 +8,7 @@ DisplayNodeJSInformation();
 // Fetch, Request, Response (Async)
 LogMessage("Fetch, Request, Response Example");
 
+
 // JSON Test Website (GMT Time)
 let request = new Request('http://date.jsontest.com', { method : "GET"});
 
@@ -30,5 +31,3 @@ GetDateTime().then((dateTimeJSON) => {LogMessage();
                     (error) => {LogMessage();
                                 LogMessage('GetDateTime Error');
                                 LogMessage(`${error}`)});
-
-

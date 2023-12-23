@@ -8,6 +8,7 @@ DisplayNodeJSInformation();
 // Promise (Resolve, Reject, Then, Catch, Finally)
 LogMessage("Promise (Resolve, Reject, Then, Catch, Finally) Example");
 
+
 let vehiclePurchasePromise = new Promise(function (resolve, reject) { 
     
     let min = 1;

@@ -1,7 +1,9 @@
 import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 
+
 // Display NodeJS Information
 DisplayNodeJSInformation();
+
 
 class Truck {
     year  = '2025';
@@ -14,7 +16,11 @@ class Vehicle {
     getDescription() {
         return `${this.year} ${this.model}`;
     }
+    getDriverInformation(firstName, lastName) {
+        return `Driver : ${firstName} ${lastName}, Year : ${this.year}, Model : ${this.model}`;
+    }
 }
+
 
 // HasInstance
 LogMessage('HasInstance Example');
@@ -27,8 +33,8 @@ LogMessage();
 // Can Pass Arguments Array
 LogMessage('Apply Example');
 const truck = new Truck();
-let description = vehicle.getDescription.apply(truck);
-LogMessage(`Apply Truck Description : ${description}`);
+let driver = vehicle.getDriverInformation.apply(truck, ["John", "Doe"]);
+LogMessage(`Apply Truck Driver : ${driver}`);
 LogMessage();
 
 
@@ -44,7 +50,7 @@ LogMessage();
 // Call
 // Can Pass Argment List
 LogMessage('Call Example');
-LogMessage(`Call Truck Description  : ${vehicle.getDescription.call(truck)}`);
+LogMessage(`Call Truck Driver  : ${vehicle.getDriverInformation.call(truck, "John", "Doe")}`);
 LogMessage();
 
 
@@ -52,4 +58,3 @@ LogMessage();
 LogMessage('ToString Example');
 LogMessage(`ToString : ${vehicle.getDescription.toString()}`);
 LogMessage();
-

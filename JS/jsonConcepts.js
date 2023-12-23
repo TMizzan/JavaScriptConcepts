@@ -1,8 +1,11 @@
 import { DisplayNodeJSInformation, LogMessage } from './utils.js';
 
+
 // Display NodeJS Information
 DisplayNodeJSInformation();
 
+
+// Sample JSON
 let testJSON = '{ "employees" : [' +
                '{ "firstName" : "John",  "lastName" : "Doe" },' +
                '{ "firstName" : "Jane",  "lastName" : "Smith" },' +
@@ -16,6 +19,7 @@ LogMessage(`Employee One Name   : ${employeeJSON.employees[0].firstName} ${emplo
 LogMessage(`Employee Two Name   : ${employeeJSON.employees[1].firstName} ${employeeJSON.employees[1].lastName}`);
 LogMessage(`Employee Third Name : ${employeeJSON.employees[2].firstName} ${employeeJSON.employees[2].lastName}`);
 LogMessage();
+
 
 // ToString
 LogMessage("ToString Example")
