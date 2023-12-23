@@ -45,6 +45,7 @@ LogMessage();
 const vehicleMaintenancePromise = new Promise(function (resolve, reject) { 
     setTimeout(resolve, 200, "[VehicleMaintenancePromise - Vehicle Maintenance Complete.]");
 });
+
 const vehicleRepairPromise = new Promise(function (resolve, reject) { 
     setTimeout(resolve, 200, "[VehicleRepairPromise      - Vehicle Repair Complete.]");
 });
