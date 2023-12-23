@@ -9,7 +9,7 @@ DisplayNodeJSInformation();
 LogMessage("Promise (Resolve, Reject, Then, Catch, Finally) Example");
 
 
-let vehiclePurchasePromise = new Promise(function (resolve, reject) { 
+const vehiclePurchasePromise = new Promise(function (resolve, reject) { 
     
     let min = 1;
     let max = 5;
@@ -71,6 +71,7 @@ Promise.allSettled([vehicleMaintenancePromise, vehicleRepairPromise]).
 
 // Promise Any
 const vehicleRejectPromise = Promise.reject("Vehicle Out Of Service");
+
 const vehicleFuelPromise = new Promise(function (resolve, reject) { 
     setTimeout(reject, 800, "[VehicleFuelPromise - Vehicle Fuel Fill Incomplete.]");
 });
@@ -88,11 +89,11 @@ Promise.any([vehicleRejectPromise, vehicleFuelPromise]).
 
 
 // Promise Race
-let vehicleRacePromise1 = new Promise(function (resolve, reject) { 
+const vehicleRacePromise1 = new Promise(function (resolve, reject) { 
     setTimeout(resolve, 800, "VehicleRacePromise1 - First Promise Complete.")
 });
 
-let vehicleRacePromise2 = new Promise(function (resolve, reject) { 
+const vehicleRacePromise2 = new Promise(function (resolve, reject) { 
     setTimeout(resolve, 200, "VehicleRacePromise2 - Second Promise Complete.")
 });
 
